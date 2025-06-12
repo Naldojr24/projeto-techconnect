@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    --cor-azul-fundo: #0B0033;
+    --cor-cinza-secao: #160c3d;
+    --cor-cinza-cards: #201250;
+    --cor-verde-destaque: #AFD5AA;
+    --cor-rosa-detalhes: #F9E9EC;
+    --cor-branca: #FFFFFF;
+    --cor-texto-principal: var(--cor-rosa-detalhes);
+    --cor-texto-secundario: #b0aac0;
+    --fonte-titulos: 'Montserrat', sans-serif;
+    --fonte-corpo: 'Open Sans', sans-serif;
+    --sombra-padrao: 0 10px 25px rgba(0, 0, 0, 0.3);
+    --sombra-leve: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --border-radius-padrao: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor-azul-fundo);
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-corpo);
+    line-height: 1.7;
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+.site-content {
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fonte-titulos);
+    color: var(--cor-branca);
+    margin-bottom: 1rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 60px; /* Aumentei o espaço para mais respiro */
+    position: relative;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--cor-verde-destaque);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px; /* Ajustei a posição da linha */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--cor-verde-destaque);
+    border-radius: 2px;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--cor-texto-secundario);
+    text-align: left;
+}
+
+a {
+    color: var(--cor-verde-destaque);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--cor-branca);
+}
+
+img {
+    max-width: 100%; /* Corrigido de 500% para 100% */
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0;
+}
+
+section {
+    padding: 60px 0;
+    background-color: var(--cor-cinza-secao);
+    margin-bottom: 80px; /* Aumentei o espaço entre as seções */
+    border-radius: var(--border-radius-padrao);
+    box-shadow: var(--sombra-leve);
+}
+
+/* ==========================================================================
+   Seção Sobre o Evento
+   ========================================================================== */
+#sobre-o-evento {
+    background: linear-gradient(145deg, #160c3d, #0B0033);
+}
+
+#sobre-o-evento p {
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 1.8;
+    padding: 0 15px;
+    color: var(--cor-texto-principal);
+}
+
+/* ==========================================================================
+   Programação do Evento
+   ========================================================================== */
+#programacao {
+    background-color: var(--cor-azul-fundo);
+}
+
+#programacao .container p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.lista-programacao {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lista-programacao li {
+    background-color: var(--cor-cinza-cards);
+    padding: 20px 25px;
+    margin-bottom: 15px;
+    border-radius: var(--border-radius-padrao);
+    border-left: 5px solid var(--cor-verde-destaque);
+    box-shadow: var(--sombra-leve);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adicionada transição */
+}
+
+.lista-programacao li:hover {
+    transform: translateY(-5px) scale(1.02); /* Adicionado efeito de levantar */
+    box-shadow: var(--sombra-padrao);
+}
+
+.lista-programacao li strong {
+    color: var(--cor-verde-destaque);
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Seção de Palestrantes
+   ========================================================================== */
+#palestrantes {
+    background: linear-gradient(145deg, #0B0033, #160c3d);
+}
+
+.palestrantes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.palestrante-card {
+    background-color: var(--cor-cinza-cards);
+    border-radius: var(--border-radius-padrao);
+    box-shadow: var(--sombra-padrao);
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.palestrante-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.palestrante-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center top; /* Mudamos aqui para melhorar o enquadramento */
+    border-bottom: 3px solid var(--cor-verde-destaque);
+}
+
+.palestrante-card .palestrante-info {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1; /* Adicionado para garantir que o rodapé alinhe se as bios tiverem tamanhos diferentes */
+}
+
+.palestrante-card .palestrante-info h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.palestrante-card .tema-palestra {
+    font-size: 0.9rem;
+    color: var(--cor-texto-secundario);
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.palestrante-card .tema-palestra strong {
+    color: var(--cor-rosa-detalhes);
+    font-style: normal;
+}
+
+.palestrante-card .bio-palestrante {
+    font-size: 0.9rem;
+    color: var(--cor-texto-secundario);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   Estilos da Seção de Depoimentos
+   ========================================================================== */
+#depoimentos {
+    background-color: var(--cor-azul-fundo);
+}
+
+.depoimentos-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.depoimento-card {
+    background-color: var(--cor-cinza-cards);
+    padding: 30px;
+    border-radius: var(--border-radius-padrao);
+    border-top: 4px solid var(--cor-verde-destaque);
+    box-shadow: var(--sombra-leve);
+    flex: 1;
+    min-width: 280px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adicionada transição */
+}
+
+.depoimento-card:hover {
+    transform: translateY(-5px); /* Adicionado efeito de levantar */
+    box-shadow: var(--sombra-padrao);
+}
+
+.depoimento-card::before {
+    content: '“';
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.05);
+    font-family: 'Times New Roman', serif;
+    line-height: 1;
+    z-index: 1;
+}
+
+.depoimento-texto {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.depoimento-autor {
+    font-weight: bold;
+    color: var(--cor-verde-destaque);
+    text-align: right;
+    font-style: normal;
+}
+
+/* ==========================================================================
+   Estilos da Seção de Contato
+   ========================================================================== */
+#contato {
+    background: var(--cor-cinza-secao);
+}
+
+#contato .container p {
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.contatos-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contato-item {
+    text-align: center;
+}
+
+.contato-item h4 {
+    color: var(--cor-texto-secundario);
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.contato-item ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contato-item a {
+    background-color: var(--cor-cinza-cards);
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: var(--cor-rosa-detalhes);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-flex; 
+    align-items: center; 
+}
+
+.contato-item a:hover {
+    background-color: var(--cor-verde-destaque);
+    color: var(--cor-azul-fundo);
+    transform: translateY(-3px);
+}
+
+/* Estilo para os ícones dentro dos links de contato */
+.contato-item a i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   Responsividade para Telas Menores
+   ========================================================================== */
+@media (max-width: 992px) {
+    .palestrante-card {
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+        padding-top: 10px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 40px; 
+
+    h2::after {
+        width: 60px;
+        height: 3px;
+    }
+
+    section {
+        padding: 40px 0;
+        margin-bottom: 40px; 
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .lista-programacao li {
+        padding: 15px 20px;
+    }
+
+    .palestrante-card {
+        width: 100%; 
+        min-width: unset;
+    }
+
+    .palestrante-card img {
+        height: auto; 
+        aspect-ratio: 16 / 9;
+    }
+}}
