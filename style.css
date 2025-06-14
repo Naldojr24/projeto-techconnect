@@ -1,3 +1,6 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E VARIÁVEIS
+   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Open+Sans:wght@400;600&display=swap');
 
 :root {
@@ -32,7 +35,6 @@ body {
     font-family: var(--fonte-corpo);
     line-height: 1.7;
     font-size: 16px;
-    padding-top: 20px;
 }
 
 .site-content {
@@ -111,9 +113,12 @@ section {
     box-shadow: var(--sombra-leve);
 }
 
-/* Sobre o Evento */
+/* ==========================================================================
+   Seção Sobre o Evento
+   ========================================================================== */
 #sobre-o-evento {
     background: linear-gradient(145deg, #160c3d, #0B0033);
+    margin-top: 40px; /* Adiciona um espaço no topo da primeira seção */
 }
 
 #sobre-o-evento p {
@@ -124,7 +129,9 @@ section {
     color: var(--cor-texto-principal);
 }
 
-/* Programação */
+/* ==========================================================================
+   Programação do Evento
+   ========================================================================== */
 #programacao {
     background-color: var(--cor-azul-fundo);
 }
@@ -162,7 +169,9 @@ section {
     font-weight: 600;
 }
 
-/* Palestrantes */
+/* ==========================================================================
+   Seção de Palestrantes
+   ========================================================================== */
 #palestrantes {
     background: linear-gradient(145deg, #0B0033, #160c3d);
 }
@@ -228,7 +237,9 @@ section {
     line-height: 1.5;
 }
 
-/* Depoimentos */
+/* ==========================================================================
+   Estilos da Seção de Depoimentos
+   ========================================================================== */
 #depoimentos {
     background-color: var(--cor-azul-fundo);
 }
@@ -284,27 +295,26 @@ section {
     font-style: normal;
 }
 
-/* Inscrição */
+/* ==========================================================================
+   Estilos da Seção de Inscrição e Aside
+   ========================================================================== */
 #inscricao {
     background: var(--cor-cinza-secao);
 }
 
-
 .inscricao-wrapper {
     display: flex;
-    gap: 40px; 
-    align-items: center; 
+    gap: 40px;
+    align-items: center;
 }
 
-
 .form-coluna {
-    flex: 2; 
+    flex: 2;
 }
 
 .form-coluna h2 {
-    text-align: left; 
+    text-align: left;
 }
-
 
 .form-coluna h2::after {
     display: none;
@@ -316,13 +326,13 @@ section {
 
 .form-inscricao {
     display: flex;
-    flex-direction: column; 
-    gap: 15px; 
+    flex-direction: column;
+    gap: 15px;
 }
 
 .campo-form {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .campo-form label {
@@ -350,14 +360,12 @@ section {
     opacity: 0.7;
 }
 
-
 .form-inscricao input:focus,
 .form-inscricao select:focus {
     outline: none;
     border-color: var(--cor-verde-destaque);
     box-shadow: 0 0 0 3px rgba(175, 213, 170, 0.3);
 }
-
 
 .btn-inscrever {
     padding: 15px;
@@ -373,16 +381,14 @@ section {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-
 .btn-inscrever:hover {
-    background-color: #c6f5c0; 
+    background-color: #c6f5c0;
     transform: translateY(-3px);
     box-shadow: 0 4px 15px rgba(175, 213, 170, 0.2);
 }
 
-
 .porque-participar {
-    flex: 1; 
+    flex: 1;
     background-color: var(--cor-cinza-cards);
     padding: 30px;
     border-radius: var(--border-radius-padrao);
@@ -408,7 +414,6 @@ section {
     color: var(--cor-texto-secundario);
 }
 
-
 .porque-participar li::before {
     content: '✓';
     position: absolute;
@@ -418,19 +423,9 @@ section {
     font-weight: bold;
 }
 
-
-@media (max-width: 900px) {
-    .inscricao-wrapper {
-        flex-direction: column; 
-        align-items: stretch;
-    }
-
-    .form-coluna h2, .form-coluna p {
-        text-align: center; 
-    }
-}
-
-/* Contato */
+/* ==========================================================================
+   Estilos da Seção de Contato
+   ========================================================================== */
 #contato {
     background: var(--cor-cinza-secao);
 }
@@ -478,8 +473,8 @@ section {
     font-weight: 600;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    display: inline-flex; 
-    align-items: center; 
+    display: inline-flex;
+    align-items: center;
 }
 
 .contato-item a:hover {
@@ -493,17 +488,53 @@ section {
     font-size: 1.1rem;
 }
 
-/* Responsividade */
+/* ==========================================================================
+   Estilos do Rodapé
+   ========================================================================== */
+footer {
+    background-color: #060024;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0; /* Aumentei o padding para mais respiro */
+    line-height: 1.6;
+    margin-top: 40px; /* Adiciona um espaço acima do rodapé */
+}
+
+footer p {
+    margin: 8px 0; /* Aumentei a margem para mais espaçamento vertical */
+    color: var(--cor-texto-secundario); /* Usei a cor secundária para consistência */
+    text-align: center; /* Garante o alinhamento central */
+}
+
+footer .integrantes {
+    font-weight: bold;
+    font-size: 1rem; /* Usei 'rem' para consistência */
+    color: var(--cor-texto-principal); /* Usei a cor principal para destaque */
+}
+
+/* ==========================================================================
+   Responsividade para Telas Menores
+   ========================================================================== */
 @media (max-width: 992px) {
     .palestrante-card {
         width: calc(50% - 15px);
     }
 }
 
+@media (max-width: 900px) {
+    .inscricao-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-coluna h2, .form-coluna p {
+        text-align: center;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         font-size: 15px;
-        padding-top: 10px;
     }
 
     h2 {
@@ -518,7 +549,7 @@ section {
 
     section {
         padding: 40px 0;
-        margin-bottom: 40px; 
+        margin-bottom: 40px;
     }
 
     .container {
@@ -530,13 +561,12 @@ section {
     }
 
     .palestrante-card {
-        width: 100%; 
+        width: 100%;
         min-width: unset;
     }
 
     .palestrante-card img {
-        height: auto; 
+        height: auto;
         aspect-ratio: 16 / 9;
     }
 }
-
