@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
     font-size: 2.4rem;
     text-align: center;
-    margin-bottom: 60px; /* Aumentei o espaço para mais respiro */
+    margin-bottom: 60px;
     position: relative;
 }
 
@@ -64,7 +64,7 @@ h3 {
 h2::after {
     content: '';
     position: absolute;
-    bottom: -15px; /* Ajustei a posição da linha */
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
     width: 80px;
@@ -90,7 +90,7 @@ a:hover {
 }
 
 img {
-    max-width: 100%; /* Corrigido de 500% para 100% */
+    max-width: 100%;
     height: auto;
     display: block;
 }
@@ -106,14 +106,12 @@ img {
 section {
     padding: 60px 0;
     background-color: var(--cor-cinza-secao);
-    margin-bottom: 80px; /* Aumentei o espaço entre as seções */
+    margin-bottom: 80px;
     border-radius: var(--border-radius-padrao);
     box-shadow: var(--sombra-leve);
 }
 
-/* ==========================================================================
-   Seção Sobre o Evento
-   ========================================================================== */
+/* Sobre o Evento */
 #sobre-o-evento {
     background: linear-gradient(145deg, #160c3d, #0B0033);
 }
@@ -126,9 +124,7 @@ section {
     color: var(--cor-texto-principal);
 }
 
-/* ==========================================================================
-   Programação do Evento
-   ========================================================================== */
+/* Programação */
 #programacao {
     background-color: var(--cor-azul-fundo);
 }
@@ -152,11 +148,11 @@ section {
     border-left: 5px solid var(--cor-verde-destaque);
     box-shadow: var(--sombra-leve);
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adicionada transição */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .lista-programacao li:hover {
-    transform: translateY(-5px) scale(1.02); /* Adicionado efeito de levantar */
+    transform: translateY(-5px) scale(1.02);
     box-shadow: var(--sombra-padrao);
 }
 
@@ -166,9 +162,7 @@ section {
     font-weight: 600;
 }
 
-/* ==========================================================================
-   Seção de Palestrantes
-   ========================================================================== */
+/* Palestrantes */
 #palestrantes {
     background: linear-gradient(145deg, #0B0033, #160c3d);
 }
@@ -201,14 +195,14 @@ section {
     width: 100%;
     height: 250px;
     object-fit: cover;
-    object-position: center top; /* Mudamos aqui para melhorar o enquadramento */
+    object-position: center top;
     border-bottom: 3px solid var(--cor-verde-destaque);
 }
 
 .palestrante-card .palestrante-info {
     padding: 20px;
     text-align: center;
-    flex-grow: 1; /* Adicionado para garantir que o rodapé alinhe se as bios tiverem tamanhos diferentes */
+    flex-grow: 1;
 }
 
 .palestrante-card .palestrante-info h3 {
@@ -234,9 +228,7 @@ section {
     line-height: 1.5;
 }
 
-/* ==========================================================================
-   Estilos da Seção de Depoimentos
-   ========================================================================== */
+/* Depoimentos */
 #depoimentos {
     background-color: var(--cor-azul-fundo);
 }
@@ -256,11 +248,11 @@ section {
     flex: 1;
     min-width: 280px;
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adicionada transição */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .depoimento-card:hover {
-    transform: translateY(-5px); /* Adicionado efeito de levantar */
+    transform: translateY(-5px);
     box-shadow: var(--sombra-padrao);
 }
 
@@ -292,9 +284,153 @@ section {
     font-style: normal;
 }
 
-/* ==========================================================================
-   Estilos da Seção de Contato
-   ========================================================================== */
+/* Inscrição */
+#inscricao {
+    background: var(--cor-cinza-secao);
+}
+
+
+.inscricao-wrapper {
+    display: flex;
+    gap: 40px; 
+    align-items: center; 
+}
+
+
+.form-coluna {
+    flex: 2; 
+}
+
+.form-coluna h2 {
+    text-align: left; 
+}
+
+
+.form-coluna h2::after {
+    display: none;
+}
+
+.form-coluna p {
+    margin-bottom: 30px;
+}
+
+.form-inscricao {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column; 
+}
+
+.campo-form label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--cor-texto-principal);
+}
+
+.form-inscricao input,
+.form-inscricao select {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--cor-azul-fundo);
+    border: 1px solid var(--cor-cinza-cards);
+    border-radius: 8px;
+    color: var(--cor-branca);
+    font-size: 1rem;
+    font-family: var(--fonte-corpo);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-inscricao input::placeholder {
+    color: var(--cor-texto-secundario);
+    opacity: 0.7;
+}
+
+
+.form-inscricao input:focus,
+.form-inscricao select:focus {
+    outline: none;
+    border-color: var(--cor-verde-destaque);
+    box-shadow: 0 0 0 3px rgba(175, 213, 170, 0.3);
+}
+
+
+.btn-inscrever {
+    padding: 15px;
+    margin-top: 10px;
+    background-color: var(--cor-verde-destaque);
+    color: var(--cor-azul-fundo);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: var(--fonte-titulos);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.btn-inscrever:hover {
+    background-color: #c6f5c0; 
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(175, 213, 170, 0.2);
+}
+
+
+.porque-participar {
+    flex: 1; 
+    background-color: var(--cor-cinza-cards);
+    padding: 30px;
+    border-radius: var(--border-radius-padrao);
+    box-shadow: var(--sombra-leve);
+}
+
+.porque-participar h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--cor-verde-destaque);
+    padding-bottom: 10px;
+}
+
+.porque-participar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.porque-participar li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 15px;
+    color: var(--cor-texto-secundario);
+}
+
+
+.porque-participar li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--cor-verde-destaque);
+    font-weight: bold;
+}
+
+
+@media (max-width: 900px) {
+    .inscricao-wrapper {
+        flex-direction: column; 
+        align-items: stretch;
+    }
+
+    .form-coluna h2, .form-coluna p {
+        text-align: center; 
+    }
+}
+
+/* Contato */
 #contato {
     background: var(--cor-cinza-secao);
 }
@@ -352,15 +488,12 @@ section {
     transform: translateY(-3px);
 }
 
-/* Estilo para os ícones dentro dos links de contato */
 .contato-item a i {
     margin-right: 8px;
     font-size: 1.1rem;
 }
 
-/* ==========================================================================
-   Responsividade para Telas Menores
-   ========================================================================== */
+/* Responsividade */
 @media (max-width: 992px) {
     .palestrante-card {
         width: calc(50% - 15px);
@@ -375,7 +508,8 @@ section {
 
     h2 {
         font-size: 2rem;
-        margin-bottom: 40px; 
+        margin-bottom: 40px;
+    }
 
     h2::after {
         width: 60px;
@@ -404,4 +538,5 @@ section {
         height: auto; 
         aspect-ratio: 16 / 9;
     }
-}}
+}
+

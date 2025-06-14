@@ -9,7 +9,6 @@
 </head>
 <body>
 
- 
   <main class="site-content">
     <section id="sobre-o-evento">
         <div class="container"> 
@@ -22,7 +21,8 @@
         <div class="container">
             <h2>Programação</h2>
             <p>Confira os principais momentos do evento TechConnect 2025 e aproveite ao máximo essa imersão em tecnologia e inovação!</p>
-            <ul class="lista-programacao"> <li><strong>08h00:</strong> Cerimônia de Abertura</li>
+            <ul class="lista-programacao">
+                <li><strong>08h00:</strong> Cerimônia de Abertura</li>
                 <li><strong>09h00:</strong> Palestra - "IA na Educação"</li>
                 <li><strong>11h00:</strong> Painel - "Startups e Tecnologia Sustentável"</li>
                 <li><strong>14h00:</strong> Workshop - "Introdução ao Desenvolvimento Web"</li>
@@ -66,56 +66,92 @@
     </section>
 
     <section id="depoimentos">
-    <div class="container">
-        
-        <h2>O que Dizem Sobre o Evento</h2>
+      <div class="container">
+          <h2>O que Dizem Sobre o Evento</h2>
+          <div class="depoimentos-container">
+              <article class="depoimento-card">
+                  <p class="depoimento-texto">"O TechConnect abriu minha mente para novas tecnologias e me conectei com profissionais incríveis! Uma experiência transformadora."</p>
+                  <footer class="depoimento-autor">- João Silva, Desenvolvedor</footer>
+              </article>
 
-        <div class="depoimentos-container">
+              <article class="depoimento-card">
+                  <p class="depoimento-texto">"Excelente organização e conteúdo de altíssima qualidade. As palestras foram muito ricas e os workshops, super práticos. Recomendo!"</p>
+                  <footer class="depoimento-autor">- Maria Oliveira, Estudante</footer>
+              </article>
 
-            <article class="depoimento-card">
-                <p class="depoimento-texto">"O TechConnect abriu minha mente para novas tecnologias e me conectei com profissionais incríveis! Uma experiência transformadora."</p>
-                <footer class="depoimento-autor">- João Silva, Desenvolvedor</footer>
-            </article>
+              <article class="depoimento-card">
+                  <p class="depoimento-texto">"O melhor evento de tecnologia que participei no ano. Ótimo para networking e para ficar por dentro das últimas tendências do mercado."</p>
+                  <footer class="depoimento-autor">- Carlos Pereira, Gerente de Projetos</footer>
+              </article>
+          </div>
+      </div>
+    </section>
+    <section id="inscricao">
+    <div class="container inscricao-wrapper">
 
-            <article class="depoimento-card">
-                <p class="depoimento-texto">"Excelente organização e conteúdo de altíssima qualidade. As palestras foram muito ricas e os workshops, super práticos. Recomendo!"</p>
-                <footer class="depoimento-autor">- Maria Oliveira, Estudante</footer>
-            </article>
+        <div class="form-coluna">
+            <h2>Inscreva-se Agora!</h2>
+            <p>Garanta sua vaga no evento que vai conectar você ao futuro da tecnologia.</p>
 
-            <article class="depoimento-card">
-                <p class="depoimento-texto">"O melhor evento de tecnologia que participei no ano. Ótimo para networking e para ficar por dentro das últimas tendências do mercado."</p>
-                <footer class="depoimento-autor">- Carlos Pereira, Gerente de Projetos</footer>
-            </article>
+            <form class="form-inscricao" action="#">
+                <div class="campo-form">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui" required>
+                </div>
+                <div class="campo-form">
+                    <label for="email">Seu Melhor E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+                </div>
+                 <div class="campo-form">
+                    <label for="area">Área de Interesse</label>
+                    <select id="area" name="area" required>
+                        <option value="" disabled selected>Selecione sua principal área...</option>
+                        <option value="ia">Inteligência Artificial</option>
+                        <option value="startups">Startups e Tecnologia Sustentável</option>
+                        <option value="web">Desenvolvimento Web</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-inscrever">Quero Me Inscrever!</button>
+            </form>
         </div>
-    </div>
-  </section>
-  
-  <section id="contato">
-    <div class="container">
-        <h2>Contatos</h2>
-        <p>Para dúvidas, sugestões ou informações sobre o evento, entre em contato conosco.</p>
 
-        <div class="contatos-wrapper">
-            
-            <div class="contato-item">
-                <h4>EMAIL</h4>
-                <ul>
-                    <li><a href="mailto:contato@techconnect2025.com" target="_blank">contato@techconnect2025.com</a></li>
-                </ul>
-            </div>
+        <aside class="porque-participar">
+            <h3>Por que participar?</h3>
+            <ul>
+                <li>Certificado de participação de 10 horas</li>
+                <li>Networking com empresas de tecnologia</li>
+                <li>Acesso a palestras e workshops exclusivos</li>
+                <li>Sorteio de brindes e licenças de software</li>
+            </ul>
+        </aside>
 
-            <div class="contato-item">
-                <h4>REDE SOCIAIS</h4>
-                <ul>
-                    <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i>INSTAGRAM</a></li>
-                    <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i>TWITTER</a></li>
-                    <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i>LINKEDIN</a></li>
-                </ul>
-            </div>
         </div>
-    </div>
-  </section>
- </main>
+    </section>
 
+    <section id="contato">
+      <div class="container">
+          <h2>Contatos</h2>
+          <p>Para dúvidas, sugestões ou informações sobre o evento, entre em contato conosco.</p>
+          <div class="contatos-wrapper">
+              <div class="contato-item">
+                  <h4>EMAIL</h4>
+                  <ul>
+                      <li><a href="mailto:contato@techconnect2025.com" target="_blank">contato@techconnect2025.com</a></li>
+                  </ul>
+              </div>
+
+              <div class="contato-item">
+                  <h4>REDE SOCIAIS</h4>
+                  <ul>
+                      <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i>INSTAGRAM</a></li>
+                      <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i>TWITTER</a></li>
+                      <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i>LINKEDIN</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </section>
+    
+  </main>
 </body>
 </html>
